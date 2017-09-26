@@ -1,0 +1,479 @@
+/* reset */
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font-weight: normal;
+	background: transparent;
+}
+
+html, body 
+{
+	height: 100%;
+	width: 100%;
+	/*background-color: #f5f5f5;*/
+	background: #f5f5f5 url("../images/bg.png");
+	font-family: Tahoma, Oswald;
+	font-size: 12px;
+	color: #8f8f8f;
+}
+
+div 
+{
+	box-sizing: border-box;
+}
+
+.head-line 
+{
+	height: 5px;
+	width: 100%;
+	background-color: #7e7e7e;	
+}
+#wrapper 
+{
+	position: relative;
+	margin: 0 auto;
+	width: 960px;	
+}
+
+header,
+footer,
+section,
+nav
+{
+	box-sizing: border-box;
+	margin-top: 25px;
+}
+
+/*
+  ========================================
+  Clearfix
+  ========================================
+*/
+.clearfix:before,
+.clearfix:after 
+{
+  content: "";
+  display: table;
+}
+.clearfix:after 
+{
+  clear: both;
+}
+.clearfix 
+{
+  clear: both;
+  *zoom: 1;
+}
+
+/* ============== 
+	HEADER 
+============== */
+
+
+.logo 
+{
+  float: left;
+}
+
+.logo img 
+{
+	display:block;
+}
+.search 
+{
+	float: right;
+}
+
+input[type="text"] 
+{
+	background-color: #f3f3f3;
+	border: 1px solid #e7e7e7;
+	border-right-style: none;
+	height: 30px;
+	width: 137px;
+	color: #b2b2b2;
+	padding: 0 10px;
+}
+
+button 
+{
+	float:right;
+	color: #fff;
+	background-color: #29c5e6;
+	border: none;
+	height: 32px;
+	width: 42px;
+	padding: 0;
+	font-family: Oswald, sans-serif;
+	font-size: 14px;
+}
+
+input:focus, button:focus  
+{
+	outline:none;
+}
+
+
+
+/* ====================== */
+
+/* ======================
+	NAVIGATION MENU 
+	FIX PROBLEM: DISPLAY: TABLE, TABLE-CELL, table-layout:fixed;
+	
+	
+	СПОСОБЫ УПРАВЛЕНИЯ ПОТОКОМ И ПОСТРОЕНИЯ СЕТОК:
+	1) FLOAT
+	2) INLINE-BLOCK
+	3) DISPLAY: TABLE, TABLE-CELL, TABLE-ROW
+	4) FLEXBOX
+====================== */
+
+nav {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+	background-color: #f3f3f3;
+}
+
+ul.menu 
+{
+    display: table-row;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    list-style: none;
+    display: table-cell;
+    text-align: center;
+}
+
+.menu li a {
+    display: block;
+	color: #b2b2b2;
+	padding: 10px 0;
+	border: 1px solid #e7e7e7;
+	border-right: none;
+	border-left: none;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: Oswald, sans-serif;
+	font-weight: 400;
+}
+
+.menu li:first-child a
+{
+	border-left: 1px solid #e7e7e7;
+}
+.menu li:last-child a
+{
+	border-right: 1px solid #e7e7e7;
+}
+
+.menu li a:hover 
+{
+    background-color: #29c5e6;
+    color: #FFF;
+	border-color: #29c5e6;
+}
+
+
+/*
+.menu 
+{
+	list-style:none;
+	overflow:hidden;
+	padding:0;
+	margin:0;
+}
+
+.menu li 
+{
+	float: left;
+	background-color: #f3f3f3;
+	border: 1px solid #e7e7e7; /
+}
+
+.menu li a 
+{
+	display: block;
+	padding: 13px 35px; 
+	color: #b2b2b2;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: Oswald, sans-serif;
+	font-weight: 400;
+}
+
+.menu li a:hover 
+{
+    background-color: #29c5e6;
+    color: #FFF;
+	border: none;
+}
+/* ================= */
+
+
+
+/* ================= 
+SECTION 
+=================== */
+.slider
+{
+	position: relative;
+	height: 331px;
+	background:url("../images/sample.png"); /* need to resize */
+	background-clip: padding-box;
+}
+
+.slider .title 
+{
+	padding-top: 27px;
+	padding-left: 40px;
+}
+
+.prim-head 
+{
+	font-family: Oswald, sans-serif;
+	font-size: 34px;
+	color:#5a5a5a;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+.sec-head {
+	font-family: Oswald, sans-serif;
+	font-size: 12px;
+	color:#acacac;
+	font-weight: 100;
+}
+
+.page-menu
+{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.sec-menu
+{
+	background-color: #f3f3f3;
+	border: 1px solid #e7e7e7;
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0;
+	margin: 0;	
+}
+
+.sec-menu li 
+{
+	float: left;
+}
+
+.sec-menu li  
+{
+	width:25%;
+	display: block;
+	box-sizing: border-box;
+	padding: 12px 80px 12px 12px;
+    text-decoration: none;
+	text-transform: uppercase;
+	font-size: 12px;
+	font-family: Oswald, sans-serif;
+	font-weight: 200;
+	
+}
+
+.sec-menu-element-icon
+{
+    display:inline-block;
+	text-align:center;
+	float:left;
+    width:22px;
+    height:22px;
+    background-color: #8f8f8f;
+    color:#f3f3f3;
+}
+
+.sec-menu-element-text 
+{
+    display:inline-block; 
+	padding-left: 12px;
+	padding-bottom: 4px;
+	vertical-align:middle;
+	color: #b2b2b2;
+}
+
+.sec-menu li:hover span.sec-menu-element-text
+{
+	color: #29c5e6;
+}
+
+.sec-menu li:hover span.sec-menu-element-icon
+{
+	 background-color: #29c5e6;
+}
+/* ================== */
+
+
+/* =========== CONTENT BLOCK =========== */
+
+.content {
+    padding: 10px;
+}
+
+
+.column {
+    display: inline-block;
+    margin-right: 20px;
+    margin-top: 20px;
+    vertical-align: top; /* how it works? blocks have no height */
+}
+
+.col-1-2 {
+    width: calc(50% - 10px); 
+}
+
+.col-1-2-fig {
+    float: left;
+    width: 140px;
+    height: 140px;
+    background: #f5f5f5 url("../images/sample.png");
+    margin-right: 10px;
+}
+
+.column:nth-child(2) {
+    margin-right: 0;
+}
+
+.column:nth-child(5) {
+    margin-right: 0;
+}
+
+.col-header {
+    background: #f5f5f5 url("../images/h1-bg.png");
+    text-transform: uppercase;
+	font-size: 12px; /* 14px font in 15px height block issue */
+	font-family: Oswald, sans-serif;
+	font-weight: 200;
+    height: 15px; 
+    margin-bottom: 15px;
+}
+
+.col-article-info {
+    padding-top: 10px;    
+}
+
+.col-head-line {
+    background: #f5f5f5 url("../images/bg.png");
+    display: inline-block;
+    height: 15px;
+    padding-right: 10px;
+    vertical-align: top;
+}
+
+.col-head-icon-svg {
+    fill: #29c5e6;    
+}
+
+.col-1-3 {
+    width: calc( 33.3333333% - 40px/3);
+}
+
+.col-1-3-fig {
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background: #f5f5f5 url("../images/sample.png");
+}
+
+
+.mini-content {
+    margin-bottom: 10px;
+}
+
+.mini-content:last-child{
+    margin-bottom: 0;
+}
+
+.mini-content p {
+    font-size: 11px;
+}
+
+.col-1 {
+    width: 100%;
+    margin-right: 0;
+    
+}
+
+.col-1 figure {
+    text-align: center;        
+}
+/* ====================================== */
+
+/* ========= FOOTER =================== */
+
+footer 
+{
+    width: 100%;
+    padding: 10px;
+    background: #7e7e7e;
+}
+
+.footer-item  {
+    float: left;
+    padding-right: 10px;
+    color: #FFF;
+    
+}
+
+.footer-twitter {
+    width: 33.333333%;    
+}
+
+footer h2 {
+    border-bottom: 1px solid #919191;
+    text-transform: uppercase;
+	font-size: 14px;
+	font-family: Oswald, sans-serif;
+}
+
+.footer-twitter p {
+    padding-right: 10px;
+    padding-top: 5px;
+}
+
+.footer-sitemap {
+    width: 16.6666667%;    
+}
+
+.footer-sitemap table {
+    width: 100%;
+}
+
+.footer-sitemap td {
+    padding: 3px;
+    text-align: left;
+}
+
+.footer-sitemap td a {
+    color: #FFF;
+    text-decoration: none;
+}
+.footer-social {
+    width: 16.6666667%;    
+}
+
+.footer-logo {
+    width: 33.333333%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
