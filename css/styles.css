@@ -33,7 +33,7 @@ div
 {
 	position: relative;
 	margin: 0 auto;
-	width: 960px;	
+	max-width: 960px;	
 }
 
 header,
@@ -294,7 +294,7 @@ SECTION
 
 .sec-menu-element-text 
 {
-    background: ;
+    float: right;
     display: inline-block; 
 	padding-left: 12px;
 	padding-bottom: 4px;
@@ -302,6 +302,13 @@ SECTION
 	color: #b2b2b2;
 }
 
+@media screen and (max-width: 960px) {
+   .sec-menu-element-icon {
+        display: none;
+    }
+}
+    
+    
 .sec-menu li:hover span.sec-menu-element-text
 {
 	color: #29c5e6;
@@ -401,13 +408,16 @@ SECTION
 
 .col-1 {
     width: 100%;
-    margin-right: 0;
-    
 }
 
 .col-1 figure {
     text-align: center;        
 }
+
+.col-1 figure img {
+    width: 100%;
+}
+
 /* ====================================== */
 
 /* ========= FOOTER =================== */
@@ -464,9 +474,24 @@ footer h2 {
 }
 
 .footer-logo {
+    background: url('../images/footer-logo.png') no-repeat;
+    background-position: right top;
     width: 33.333333%;
-    text-align: center;
-    padding-top: 20px;
+    text-align: right;
+    padding-right: 0;
+    margin-top: 10px;
 }
+
+.footer-logo p {
+    padding-top: 50px;
+}
+
+@media screen and (max-width: 300px) {
+    .footer-logo {
+        background: url('../images/footer-logo-small.png') no-repeat;  
+        background-position: right top;
+    }      
+}
+    
 
 
