@@ -8,7 +8,7 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
 	background: transparent;
 }
 
-html, body 
+body 
 {
 	height: 100%;
 	width: 100%;
@@ -26,12 +26,13 @@ div
 .head-line 
 {
 	height: 5px;
-	width: 100%;
+	min-width: 960px;
 	background-color: #7e7e7e;	
 }
+
 #wrapper 
 {
-	position: relative;
+	/*position: relative;*/
 	margin: 0 auto;
 	width: 960px;	
 }
@@ -347,6 +348,10 @@ SECTION
     margin-right: 0;
 }
 
+.column:nth-child(6) {
+    margin-right: 0;
+} 
+
 .col-header {
     background: #f5f5f5 url("../images/h1-bg.png");
     text-transform: uppercase;
@@ -416,9 +421,14 @@ SECTION
 
 footer 
 {
-    width: 100%;
-    padding: 10px;
+    min-width: 960px;
     background: #7e7e7e;
+}
+
+#footer-wrapper {
+    width: 960px;
+    margin: 0 auto;
+    padding-left: 10px;
 }
 
 .footer-item  {
